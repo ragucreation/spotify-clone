@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/main-content.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="ri-spotify-fill text-2xl"></i>
+                <h1>Spotify</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-item active">
+                    <i class="ri-home-5-fill"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ri-search-line"></i>
+                    <span>Search</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ri-album-line"></i>
+                    <span>Your Library</span>
+                </a>
+            </nav>
+            <div class="playlist-actions">
+                <button class="create-playlist-btn">
+                    <i class="ri-add-box-line"></i>
+                    <span>Create Playlist</span>
+                </button>
+                <button class="liked-songs-btn">
+                    <i class="ri-heart-3-fill"></i>
+                    <span>Liked Songs</span>
+                </button>
+            </div>
+            <div class="playlist-list">
+                <ul id="playlists"></ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="navigation-buttons">
+                    <button class="nav-btn"><i class="ri-arrow-left-s-line"></i></button>
+                    <button class="nav-btn"><i class="ri-arrow-right-s-line"></i></button>
+                </div>
+                <div class="user-menu">
+                    <button class="install-btn">
+                        <i class="ri-download-2-line"></i>
+                        Install App
+                    </button>
+                    <button class="user-btn">
+                        <i class="ri-user-3-fill"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="featured-playlists">
+                <h2>Good afternoon</h2>
+                <div class="featured-grid" id="featured"></div>
+            </div>
+            <div class="recent-plays">
+                <h2>Recently played</h2>
+                <div class="recent-grid" id="recent"></div>
+            </div>
+        </main>
+
+        <footer class="player">
+            <div class="now-playing">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=50&h=50&fit=crop" alt="Album cover" class="current-album">
+                <div class="track-info">
+                    <h4 class="track-name">Song Title</h4>
+                    <p class="artist-name">Artist Name</p>
+                </div>
+                <button class="like-btn">
+                    <i class="ri-heart-line"></i>
+                </button>
+            </div>
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn"><i class="ri-shuffle-line"></i></button>
+                    <button class="control-btn"><i class="ri-skip-back-fill"></i></button>
+                    <button class="play-btn"><i class="ri-play-fill"></i></button>
+                    <button class="control-btn"><i class="ri-skip-forward-fill"></i></button>
+                    <button class="control-btn"><i class="ri-repeat-line"></i></button>
+                </div>
+                <div class="progress-bar">
+                    <span class="time current">2:14</span>
+                    <div class="progress-container">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="time total">3:45</span>
+                </div>
+            </div>
+            <div class="volume-controls">
+                <button class="control-btn"><i class="ri-volume-up-line"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-level"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
